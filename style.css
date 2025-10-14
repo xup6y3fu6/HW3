@@ -1,13 +1,24 @@
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: sans-serif, Arial;
+    background: #EDF2C5;
+    min-height: 100vh;
+}
+
+/* --- Header --- */
 header{
-    display: inline-flex;
-    position: absolute;
-    top: 36px;
-    margin:0 auto;
-    justify-content: center;
+    display: flex;
+    width: 1120px;
+    margin: 36px auto 20px; 
+    justify-content: space-between;
     align-items: center;
-    gap: 661px;
-    
-    
 }
 .bigtitle{
     color:#778A50;
@@ -22,13 +33,11 @@ header{
     display: flex;
     align-items: center;
 }
-
 .btn img {
     width: 20px;
     height: 20px;
     margin-left: 10px;
 }
-
 .divider {
     display: inline-block;
     width: 1px;
@@ -36,7 +45,6 @@ header{
     background-color: #7B8C42;
     margin: 0 15px;
 }
-
 .button {
     text-decoration: none;
     color: #446600;
@@ -47,62 +55,70 @@ header{
     border-radius: 5px;
 }
     
+/* --- Navigation --- */
 nav{
-    position: absolute;
-    top: 106px;
+    margin: 0 auto 20px;
     box-sizing: border-box;
-    padding:  10px 0px;
     display: flex;
     align-items:center;
     width: 1120px;
     height: 44px;
     border-radius: 3px;
-    background-color: #778A50
-    
-    
-    }
-    nav  a{
+    background-color: #778A50;
+}
+nav a{
     color: var(--background, #EDF2C5);
     font-family: Noto Sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
     line-height: normal; 
-    margin: 30px;
+    
+    margin: 0; 
     text-decoration: none;
     
-    }
-
-    .nav-link:hover {
-    color: #446600;            
-    }
-
-    .content{
-    position: absolute;
-    top: 166px;
-    width: 1120px;
-    height: 681px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     
+    display: inline-block;
+    padding: 10px 30px; 
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #446600; 
+    color: #EDF2C5; 
+}
+
+/* --- Main Content --- */
+.content{
+    margin: 0 auto;
+    width: 1120px;
+    flex-shrink: 0;
 }
 .pumpkin{
-    width: 1120px;
+    width: 100%;
     height: 448px;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    
-    
+}
+
+
+.side-by-side-sections{
+    width: 1120px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
 }
 .vegetables{
-    background-position : left;
-    position: absolute; top: 640px; left: 455px;
     width: 528px;
     height: 201px;
-    
-    
+}
+
+
+.vegetable-images-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; 
+    width: 100%; 
 }
 
 .title_vegetables{
@@ -123,9 +139,6 @@ nav{
     flex-direction: column;
     width: 528px;
     height: 201px;
-    position: absolute; top: 640px; left: 1045px;
-    
-
 }
 .title_contact{
     box-sizing: border-box;
@@ -156,8 +169,6 @@ nav{
     font-size: 12px;
     justify-content: center; 
     color: #7D7D7D;
-    
-    
 }
 .divider2 {
     display: block;         
@@ -167,34 +178,23 @@ nav{
     margin: 10px 0;         
 }
 
-
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif, Arial;
-    background: #EDF2C5;
-    }
-.footer{
-    position: absolute;
-    top: 964px; left: 0px;
+/* --- Footer --- */
+.site-footer{
+    margin-top: 20px;
     box-sizing: border-box;
     display: flex;
-    margin: 0 auto;
     width: 100%;
     height: 60px;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
     background: var(--Primary, #778A50);
-    }
-    .footer p{
+}
+.site-footer p{
     color: var(--background, #EDF2C5);
     font-family: Arial;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    } 
-    
+}
